@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
 import axios from 'axios';
+import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 
 const QUERY = 'https://data.gov.sg/api/action/datastore_search';
 const RESOURCE_ID = 'ede26d32-01af-4228-b1ed-f05c45a1d8ee';
@@ -18,10 +19,10 @@ export default function SchoolsListingScreen({ navigation }) {
 					//   q:"Primary"
 				}
 			});
-			const getData = response.data.result.records;
-			getData.map((item) => {
-				item.id = item._id.toString();
-			});
+			let getData = response.data.result.records;
+			//NTS: Only needs the Primary School, Using Hi-Level filter
+			getData = getData.filter((item)=>item.mainlevel_code == "PRIMARY");
+			getData.map((item) => item.id = item._id.toString());
 			setData(getData);
 		} catch (error) {
 			console.log(error);
@@ -34,18 +35,17 @@ export default function SchoolsListingScreen({ navigation }) {
 
 	const renderItem = ({ item }) => (
 		<View style={styles.flatlist}>
-			<Text>{item.school_name}</Text>
-			<Text>{item.url_address}</Text>
-			<Text>{item.principal_name}</Text>
+			<TouchableOpacity onPress={() => navigation.navigate('Schools Details', item)}>
+				<Text>{item.school_name}</Text>
+				<Text>{item.url_address}</Text>
+				<Text>{item.principal_name}</Text>
+				<Text>{item.mainlevel_code}</Text>
+			</TouchableOpacity>
 		</View>
 	);
 
 	return (
 		<View style={styles.container}>
-			<Text>This is School Listing Screen</Text>
-			<TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Schools Details')}>
-				<Text>go to the next page</Text>
-			</TouchableOpacity>
 			<FlatList data={data} renderItem={renderItem} />
 		</View>
 	);
