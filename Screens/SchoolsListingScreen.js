@@ -20,9 +20,9 @@ export default function SchoolsListingScreen({ navigation }) {
 				}
 			});
 			let getData = response.data.result.records;
-			//NTS: Only needs the Primary School, Using Hi-Level filter
-			getData = getData.filter((item)=>item.mainlevel_code == "PRIMARY");
-			getData.map((item) => item.id = item._id.toString());
+			//NTS: Only needs the Primary School, using Hi-Level filter
+			getData = getData.filter((item) => item.mainlevel_code == 'PRIMARY');
+			getData.map((item) => (item.id = item._id.toString()));
 			setData(getData);
 		} catch (error) {
 			console.log(error);
@@ -46,6 +46,14 @@ export default function SchoolsListingScreen({ navigation }) {
 
 	return (
 		<View style={styles.container}>
+			<View style={styles.buttonContainer}>
+				<TouchableOpacity style={styles.button}>
+					<Text>List</Text>
+				</TouchableOpacity>
+				<TouchableOpacity style={styles.button}>
+					<Text>Map</Text>
+				</TouchableOpacity>
+			</View>
 			<FlatList data={data} renderItem={renderItem} />
 		</View>
 	);
@@ -55,12 +63,17 @@ const styles = StyleSheet.create({
 	container: {
 		backgroundColor: 'yellow'
 	},
+	buttonContainer: {
+		flexDirection: 'row',
+		justifyContent:'center',
+	},
 	button: {
-		width: 120,
-		backgroundColor: 'brown',
-		padding: 30,
-		margin: 50,
-		borderRadius: 15
+		backgroundColor: 'grey',
+		padding: 20,
+		paddingHorizontal:80,
+		borderWidth:1,
+		marginVertical:20,
+
 	},
 	flatlist: {
 		borderWidth: 1,
