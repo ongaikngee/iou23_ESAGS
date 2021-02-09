@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
 import axios from 'axios';
-import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 
 const QUERY = 'https://data.gov.sg/api/action/datastore_search';
 const RESOURCE_ID = 'ede26d32-01af-4228-b1ed-f05c45a1d8ee';
