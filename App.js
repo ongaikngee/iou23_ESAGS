@@ -4,6 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import UserScreen from './Screens/UserScreen';
 import SchoolStack from './Screens/SchoolStack';
+import TestScreen from './Screens/TestScreen';
+import SchoolScreen from './Screens/SchoolScreen'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const Tab = createBottomTabNavigator();
@@ -20,6 +22,10 @@ export default function App() {
 							iconName = focused ? 'school' : 'school-outline';
 						} else if (route.name === 'User') {
 							iconName = focused ? 'ios-people' : 'people-outline';
+						} else if (route.name === 'Test') {
+							iconName = focused ? 'ios-battery-dead' : 'battery-charging';
+						}else if (route.name === 'newSchool') {
+							iconName = focused ? 'school' : 'school-outline';
 						}
 
 						// You can return any component that you like here!
@@ -33,6 +39,8 @@ export default function App() {
 			>
 				<Tab.Screen name="Schools" component={SchoolStack} />
 				<Tab.Screen name="User" component={UserScreen} />
+				<Tab.Screen name="newSchool" component={SchoolScreen} />
+				{/* <Tab.Screen name="School" component={SchoolScreen} /> */}
 			</Tab.Navigator>
 		</NavigationContainer>
 	);

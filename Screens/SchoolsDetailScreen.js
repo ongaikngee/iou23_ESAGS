@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image, ScrollView, ActivityIndicator } from 'react-native';
 import SchDetailsComponent from '../components/SchDetailsComponent';
-import MapView, { Circle, Marker, MarkerAnimated } from 'react-native-maps';
+// import MapView, { Circle, Marker } from 'react-native-maps';
 
 import { useGeoCode } from '../hooks/api';
 
-export default function SchoolsDetailScreen({ route }) {
+export default function SchoolsDetailScreen({ route, navigation }) {
 	// console.log(route.params);
 	const [ leftScreen, setLeftScreen ] = useState(true);
 	const { id, school_name, address, postal_code, url_address, email_address } = route.params;
@@ -24,46 +24,54 @@ export default function SchoolsDetailScreen({ route }) {
 	return (
 		<View style={styles.container}>
 			<Text style={styles.title}>{school_name}</Text>
-			<Text>{id}</Text>
-			<Text>{url_address}</Text>
-			<Text>{address}</Text>
-			<Text>{postal_code}</Text>
-			<Text>{email_address}</Text>
-			<View>
-				{loading ? (
-					<ActivityIndicator size="large" />
-				) : (
-					<MapView
-						style={styles.map}
-						initialRegion={{
-							latitude: latitude,
-							longitude: longitude,
-							latitudeDelta: 0.0922,
-							longitudeDelta: 0.0421
-						}}
-					>
-						<Marker coordinate={{ latitude: latitude, longitude: longitude }} />
+			<View style={styles.headerContainer}>
+				<View style={styles.headerInfo}>
+					<Text>{url_address}</Text>
+					<Text>{address}</Text>
+					<Text>{postal_code}</Text>
+					<Text>{email_address}</Text>
+				</View>
+				<View style={styles.headerMap}>
+					{loading ? (
+						<ActivityIndicator size="large" />
+					) : (
+						<View>
+							<TouchableOpacity onPress={() => navigation.navigate('Schools Listing', 'false')}>
+								<Text>MapView will be right back</Text>
+								{/* <MapView
+								style={styles.map}
+								initialRegion={{
+									latitude: latitude,
+									longitude: longitude,
+									latitudeDelta: 0.0922,
+									longitudeDelta: 0.0421
+								}}
+								>
+								<Marker coordinate={{ latitude: latitude, longitude: longitude }} />
 
-						<Circle
-							center={{
-								latitude: latitude,
-								longitude: longitude
-							}}
-							radius={2000}
-							fillColor={'rgba(0, 255, 0, 0.4)'}
-							strokeColor={'rgba(0,255,0,1)'}
-						/>
-						<Circle
-							center={{
-								latitude: latitude,
-								longitude: longitude
-							}}
-							radius={1000}
-							fillColor={'rgba(255, 0, 0, 0.4)'}
-							strokeColor={'rgba(255,0,0,1)'}
-						/>
-					</MapView>
-				)}
+								<Circle
+									center={{
+										latitude: latitude,
+										longitude: longitude
+									}}
+									radius={2000}
+									fillColor={'rgba(0, 255, 0, 0.4)'}
+									strokeColor={'rgba(0,255,0,1)'}
+									/>
+								<Circle
+									center={{
+										latitude: latitude,
+										longitude: longitude
+									}}
+									radius={1000}
+									fillColor={'rgba(255, 0, 0, 0.4)'}
+									strokeColor={'rgba(255,0,0,1)'}
+									/>
+							</MapView> */}
+							</TouchableOpacity>
+						</View>
+					)}
+				</View>
 			</View>
 			<View style={styles.buttonContainer}>
 				<TouchableOpacity style={styles.touchButton} onPress={() => setScreen(true)}>
@@ -93,10 +101,20 @@ export default function SchoolsDetailScreen({ route }) {
 
 const styles = StyleSheet.create({
 	container: {
-		backgroundColor: 'orange'
+		backgroundColor: 'orange',
+		flex: 1
+	},
+	headerContainer: {
+		flexDirection: 'row'
+	},
+	headerInfo: {
+		flex: 2
+	},
+	headerMap: {
+		flex: 1
 	},
 	title: {
-		fontSize: 36
+		fontSize: 24
 	},
 	header: {
 		fontSize: 24
@@ -119,7 +137,7 @@ const styles = StyleSheet.create({
 	},
 	map: {
 		width: '100%',
-		height: 200,
+		height: 100,
 		borderRadius: 15
 	}
 });
