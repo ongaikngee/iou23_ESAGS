@@ -1,321 +1,178 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { View, Text, StyleSheet, Animated, TouchableOpacity, Dimensions, Platform } from 'react-native';
-import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
-import { SCHOOL_DATA, MARKERS } from '../data/schoolData';
-import { Ionicons } from '@expo/vector-icons';
-import { MaterialCommunityIcons } from '@expo/vector-icons/MaterialCommunityIcons';
-import { Fontisto } from '@expo/vector-icons/Fontisto';
-import { ScrollView, TextInput } from 'react-native-gesture-handler';
-// import { useEffect } from 'react/cjs/react.development';
-// import { useRef } from 'react';
+import React, { useEffect, useState } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import axios from 'axios';
 
-const { width, height } = Dimensions.get('window');
-const CARD_HEIGHT = 220;
-const CARD_WIDTH = width * 0.8;
-const SPACING_FOR_CARD_INSET = width * 0.1 - 10;
+const QUERY = 'https://data.gov.sg/api/action/datastore_search';
+const RESOURCE_ID = 'ede26d32-01af-4228-b1ed-f05c45a1d8ee';
+const LIMIT = 500;
 
-export default function TestScreen() {
-	const [ latitude, setlatitude ] = useState(1.275439);
-	const [ longitude, setLongitude ] = useState(103.840013);
-	const [ schoolCoordinate, setSchoolCoordinate ] = useState(SCHOOL_DATA);
+export default () => {
+	const [ data, setData ] = useState([]);
+	const [ entries, setEntries ] = useState(0);
 
-	const initialMapState = {
-		MARKERS,
-		categories: [
-			{
-				name: 'Fastfood Center'
-				// icon: <MaterialCommunityIcons style={styles.chipsIcon} name="food-fork-drink" size={18} />,
-			},
-			{
-				name: 'Restaurant'
-				// icon: <Ionicons name="ios-restaurant" style={styles.chipsIcon} size={18} />,
-			},
-			{
-				name: 'Dineouts'
-				// icon: <Ionicons name="md-restaurant" style={styles.chipsIcon} size={18} />,
-			},
-			{
-				name: 'Snacks Corner'
-				// icon: <MaterialCommunityIcons name="food" style={styles.chipsIcon} size={18} />,
-			},
-			{
-				name: 'Hotel'
-				// icon: <Fontisto name="hotel" style={styles.chipsIcon} size={15} />,
-			}
-		],
-		region: {
-			latitude: 22.62938671242907,
-			longitude: 88.4354486029795,
-			latitudeDelta: 0.04864195044303443,
-			longitudeDelta: 0.040142817690068
+	const getDATA = async () => {
+		console.log('You are starting AXIOs!');
+		console.log('##############################');
+
+		setData([]);
+		try {
+			const response = await axios.get(QUERY, {
+				params: {
+					resource_id: RESOURCE_ID,
+					limit: LIMIT
+				}
+			});
+
+			let obj = response.data.result.records;
+			let tempdata = [];
+
+			// filter the data here
+			obj = obj.filter((item) => item.mainlevel_code == 'PRIMARY');
+			// obj = obj.filter((item) => item.zone_code == 'SOUTH');
+			// obj = obj.filter((item) => item.dgp_code == 'CENTRAL');
+			obj = obj.filter((item) => item.gifted_ind == 'Yes');
+			obj.map((item, index) => {
+				tempdata.push({
+					id: item._id,
+					address: item.address,
+					postal_code: item.postal_code,
+					email_address: item.email_address,
+					url_address: item.url_address,
+					dgp_code: item.dgp_code,
+					school_name: item.school_name,
+					autonomous_ind: item.autonomous_ind,
+					gifted_ind: item.gifted_ind,
+					ip_ind: item.ip_ind,
+					sap_ind: item.sap_ind,
+					zone_code: item.zone_code,
+					dgp_code: item.dgp_code,
+					mainlevel_code: item.mainlevel_code,
+					nature_code: item.nature_code,
+					session_code: item.session_code,
+					type_code: item.type_code
+				});
+			});
+			setData(tempdata);
+			console.log(data.length + ' schools founded!');
+			setEntries(data.length);
+		} catch (error) {
+			console.log(error);
 		}
 	};
 
-	const [ state, setState ] = React.useState(initialMapState);
+	const getLatLong = () => {
 
-	let mapIndex = 0;
-	let mapAnimation = new Animated.Value(0);
+		data.forEach(async (item, index) => {
+			// A: Togger between this with the letter
+			const API = 'http://venueChope.pythonanywhere.com';
+			const API_ADD = '/venue/';
+
+			// A: Togger between this with the letter. Find the missing key.
+			// const URL = 'http://api.positionstack.com/v1/forward';
+			// const PARAM_KEY = '';
+			// const PARAM_QUERY = item.address + ' Singapore(' + item.postal_code + ')';
+			// const PARAM_OUTPUT = 'json';
+			// const PARAM_LIMIT = '1';
+
+			try {
+				// B: Togger between this with the letter
+				const response = await axios.get(API + API_ADD + 1);
+
+				// B: Togger between this with the letter
+				// const response = await axios.get(URL, {
+				// 	params: {
+				// 		access_key: PARAM_KEY,
+				// 		query: PARAM_QUERY,
+				// 		limit: PARAM_LIMIT,
+				// 		output: PARAM_OUTPUT
+				// 	}
+				// });
+
+				console.log('processing: ' + index);
+
+				// C: Togger between this with the letter
+				item.latitude = response.data.name;
+				item.longitude = response.data.name;
+
+				// C: Togger between this with the letter
+				// item.latitude = response.data.data[0].latitude;
+				// item.longitude = response.data.data[0].longitude;
+			} catch (error) {
+				console.log(error);
+			}
+		});
+	};
 
 	useEffect(() => {
-		mapAnimation.addListener(({ value }) => {
-			let index = Math.floor(value / CARD_WIDTH + 0.3); // animate 30% away from landing on the next item
-			if (index >= state.MARKERS.length) {
-				index = state.MARKERS.length - 1;
-			}
-			if (index <= 0) {
-				index = 0;
-			}
-
-			clearTimeout(regionTimeout);
-
-			const regionTimeout = setTimeout(() => {
-				if (mapIndex !== index) {
-					mapIndex = index;
-					const { coordinate } = state.MARKERS[index];
-					_map.current.animateToRegion(
-						{
-							...coordinate,
-							latitudeDelta: state.region.latitudeDelta,
-							longitudeDelta: state.region.longitudeDelta
-						},
-						350
-					);
-				}
-			}, 10);
-		});
-	});
-
-	const interpolations = state.MARKERS.map((marker, index) => {
-		const inputRange = [ (index - 1) * CARD_WIDTH, index * CARD_WIDTH, (index + 1) * CARD_WIDTH ];
-
-		const scale = mapAnimation.interpolate({
-			inputRange,
-			outputRange: [ 1, 1.5, 1 ],
-			extrapolate: 'clamp'
-		});
-
-		return { scale };
-	});
-
-	const onMarkerPress = (mapEventData) => {
-		const markerID = mapEventData._targetInst.return.key;
-		console.log(markerID);
-
-		let x = markerID * CARD_WIDTH + markerID * 20;
-		if (Platform.OS === 'ios') {
-			x = x - SPACING_FOR_CARD_INSET;
-		}
-
-		_scrollView.current.scrollTo({ x: x, y: 0, animated: true });
-	};
-
-	const _map = useRef(null);
-	const _scrollView = React.useRef(null);
+		getDATA();
+	}, []);
 
 	return (
-		<View style={styles.container}>
-			<MapView
-				ref={_map}
-				style={styles.map}
-				provider={PROVIDER_GOOGLE}
-				initialRegion={state.region}
-				mapType={'standard'}
-				showsUserLocation={true}
+		<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+			<Text style={styles.title}>Instructions:</Text>
+			<Text>
+				This screen enable you to append LatLong into the data. You can filter the data in getDATA function.{' '}
+			</Text>
+			<Text>Step 1: The data will be loaded automatically. </Text>
+			<Text style={styles.title}>{entries} schools founded.</Text>
+			<TouchableOpacity
+				style={styles.button}
+				onPress={() => {
+					getDATA();
+				}}
 			>
-				{state.MARKERS.map((marker, index) => {
-					const scaleStyle = {
-						transform: [
-							{
-								scale: interpolations[index].scale
-							}
-						]
-					};
-					return (
-						<MapView.Marker key={index} coordinate={marker.coordinate} onPress={(e) => onMarkerPress(e)}>
-							<Animated.View style={[ styles.markerWrap ]}>
-								<Animated.Image
-									source={require('../assets/map_marker.png')}
-									style={[ styles.marker, scaleStyle ]}
-									resizeMode="cover"
-								/>
-								{/* <Ionicons name="location" size={24} color="red" style={[styles.newStyle]}/> */}
-							</Animated.View>
-						</MapView.Marker>
-					);
-				})}
-			</MapView>
-			<View style={styles.searchBox}>
-				<TextInput
-					placeholder="Search here"
-					placeholderTextColor="#000"
-					autoCapitalize="none"
-					style={{ flex: 1, padding: 0 }}
-				/>
-				<Ionicons name="ios-search" size={20} />
-			</View>
-			<ScrollView
-				horizontal
-				scrollEventThrottle={1}
-				showsHorizontalScrollIndicator={false}
-				height={50}
-				style={styles.chipsScrollView}
+				<Text>Get data</Text>
+			</TouchableOpacity>
+			<Text>Step 2: Click on the 2nd button to fetch API and append data into array. </Text>
+			<TouchableOpacity
+				style={styles.button}
+				onPress={() => {
+					getLatLong();
+				}}
 			>
-				{state.categories.map((category, index) => (
-					<TouchableOpacity key={index} style={styles.chipsItem}>
-						{category.icon}
-						<Text>{category.name}</Text>
-					</TouchableOpacity>
-				))}
-			</ScrollView>
+				<Text>Get LatLong</Text>
+			</TouchableOpacity>
 
-			<Animated.ScrollView
-				ref={_scrollView}
-				horizontal
-				scrollEventThrottle={1}
-				showsHorizontalScrollIndicator={false}
-				style={styles.scrollView}
-				pagingEnabled
-				snapToInterval={CARD_WIDTH + 20}
-				snapToAlignment="center"
-				contentInset={{ top: 0, bottom: 0, left: SPACING_FOR_CARD_INSET, right: SPACING_FOR_CARD_INSET }}
-				onScroll={Animated.event([ { nativeEvent: { contentOffset: { x: mapAnimation } } } ], {
-					useNativeDriver: true
-				})}
-			>
-				{state.MARKERS.map((marker, index) => (
-					<View style={styles.card} key={index}>
-						{/* <Image source={marker.image} style={styles.cardImage} resizeMode="cover" /> */}
-						<View style={styles.textContent}>
-							<Text numberOfLines={1} style={styles.cardtitle}>
-								{marker.title}
-							</Text>
-							{/* <StarRating ratings={marker.rating} reviews={marker.reviews} /> */}
-							<Text numberOfLines={1} style={styles.cardDescription}>
-								{marker.description}
-							</Text>
-							{/* <View style={styles.button}>
-								<TouchableOpacity
-									onPress={() => {}}
-									style={[
-										styles.signIn,
-										{
-											borderColor: '#FF6347',
-											borderWidth: 1
-										}
-									]}
-								>
-									<Text
-										style={[
-											styles.textSign,
-											{
-												color: '#FF6347'
-											}
-										]}
-									>
-										Order Now
-									</Text>
-								</TouchableOpacity>
-							</View> */}
-						</View>
-					</View>
-				))}
-			</Animated.ScrollView>
+			<Text>Step 3: Click on the 3rd button to console.log data</Text>
+			<View style={{flexDirection:'row'}}>
+				<TouchableOpacity
+					style={styles.button}
+					onPress={() => {
+						console.log('*********************');
+						console.log(JSON.stringify(data));
+					}}
+				>
+					<Text>see JSON data</Text>
+				</TouchableOpacity>
+				<TouchableOpacity
+					style={styles.button}
+					onPress={() => {
+						console.log('*********************');
+						console.log(data);
+					}}
+				>
+					<Text>see raw data</Text>
+				</TouchableOpacity>
+			</View>
 		</View>
 	);
-}
+};
 
 const styles = StyleSheet.create({
 	container: {
-		// justifyContent: 'center',
-		// alignItems: 'center',
-		// height: '100%'
-		flex: 1
-	},
-	map: {
-		width: '100%',
-		height: '100%'
-	},
-	markerWrap: {
-		alignItems: 'center',
+		flex: 1,
 		justifyContent: 'center',
-		width: 50,
-		height: 50
-	},
-	searchBox: {
-		position: 'absolute',
-		marginTop: Platform.OS === 'ios' ? 40 : 20,
-		flexDirection: 'row',
-		backgroundColor: '#fff',
-		width: '90%',
-		alignSelf: 'center',
-		borderRadius: 5,
-		padding: 10,
-		shadowColor: '#ccc',
-		shadowOffset: { width: 0, height: 3 },
-		shadowOpacity: 0.5,
-		shadowRadius: 5,
-		elevation: 10
-	},
-	chipsScrollView: {
-		position: 'absolute',
-		top: Platform.OS === 'ios' ? 90 : 80,
-		paddingHorizontal: 10
-	},
-	chipsItem: {
-		flexDirection: 'row',
-		backgroundColor: '#fff',
-		borderRadius: 20,
-		padding: 8,
-		paddingHorizontal: 20,
-		marginHorizontal: 10,
-		height: 35,
-		shadowColor: '#ccc',
-		shadowOffset: { width: 0, height: 3 },
-		shadowOpacity: 0.5,
-		shadowRadius: 5,
-		elevation: 10
-	},
-	scrollView: {
-		position: 'absolute',
-		bottom: 0,
-		left: 0,
-		right: 0,
-		paddingVertical: 10
-	},
-	textContent: {
-		flex: 2,
-		padding: 10
-	},
-	cardtitle: {
-		fontSize: 12,
-		// marginTop: 5,
-		fontWeight: 'bold'
-	},
-	cardDescription: {
-		fontSize: 12,
-		color: '#444'
-	},
-	card: {
-		// padding: 10,
-		elevation: 2,
-		backgroundColor: '#FFF',
-		borderTopLeftRadius: 5,
-		borderTopRightRadius: 5,
-		marginHorizontal: 10,
-		shadowColor: '#000',
-		shadowRadius: 5,
-		shadowOpacity: 0.3,
-		shadowOffset: { x: 2, y: -2 },
-		height: CARD_HEIGHT,
-		width: CARD_WIDTH
-		// overflow: 'hidden'
+		alignItems: 'center'
 	},
 	button: {
-		alignItems: 'center',
-		marginTop: 5
+		padding: 20,
+		margin: 20,
+		borderRadius: 5,
+		borderWidth: 1,
+		backgroundColor: 'red'
 	},
-	marker: {
-		width: 30,
-		height: 30
+	title: {
+		fontSize: 24,
+		marginTop: 20
 	}
 });

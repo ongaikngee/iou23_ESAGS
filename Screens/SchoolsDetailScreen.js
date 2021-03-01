@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image, ScrollView, ActivityIndicator } from 'react-native';
 import SchDetailsComponent from '../components/SchDetailsComponent';
 // import MapView, { Circle, Marker } from 'react-native-maps';
-
 import { useGeoCode } from '../hooks/api';
 
 export default function SchoolsDetailScreen({ route, navigation }) {

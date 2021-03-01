@@ -24,7 +24,7 @@ export default function App() {
 							iconName = focused ? 'ios-people' : 'people-outline';
 						} else if (route.name === 'Test') {
 							iconName = focused ? 'ios-battery-dead' : 'battery-charging';
-						}else if (route.name === 'newSchool') {
+						}else if (route.name === 'OldSchool') {
 							iconName = focused ? 'school' : 'school-outline';
 						}
 
@@ -37,9 +37,11 @@ export default function App() {
 					inactiveTintColor: 'gray'
 				}}
 			>
-				<Tab.Screen name="Schools" component={SchoolStack} />
+				<Tab.Screen name="Schools" component={SchoolScreen} />
 				<Tab.Screen name="User" component={UserScreen} />
-				<Tab.Screen name="newSchool" component={SchoolScreen} />
+				<Tab.Screen name="OldSchool" component={SchoolStack} />
+				<Tab.Screen name="Test" component={TestScreen} />
+				
 				{/* <Tab.Screen name="School" component={SchoolScreen} /> */}
 			</Tab.Navigator>
 		</NavigationContainer>
