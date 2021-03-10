@@ -14,9 +14,9 @@ web-build/
 
 
 # API Key
-hooks/api.js
+# hooks/api.js
 
 #data
-data/data.json
-data/filterData.json
+# data/data.json
+# data/filterData.json
 
