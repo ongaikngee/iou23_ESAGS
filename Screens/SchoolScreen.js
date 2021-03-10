@@ -170,8 +170,10 @@ export default function SchoolScreen() {
 							// ...coordinate,
 							latitude: latitude,
 							longitude: longitude,
+							// latitudeDelta: data.region.latitudeDelta - 0.49,
+							// longitudeDelta: data.region.longitudeDelta - 0.08
 							latitudeDelta: data.region.latitudeDelta - 0.49,
-							longitudeDelta: data.region.longitudeDelta - 0.08
+							longitudeDelta: data.region.longitudeDelta - 0.2
 						},
 						350
 					);
@@ -387,12 +389,6 @@ export default function SchoolScreen() {
 									<Text>Autonomous: {marker.autonomous_ind}</Text>
 									<Text style={styles.cardSchoolName}>Programme</Text>
 									<View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-
-
-
-									{/* postal_code: '319765',
-		email_address: 'CHIJTPPS@MOE.EDU.SG',
-		url_address: 'http://www.chijpritoapayoh.moe.edu.sg', */}
 										<Text>
 											Gifted:{' '}
 											{marker.gifted_ind === 'Yes' ? (
@@ -406,39 +402,31 @@ export default function SchoolScreen() {
 											)}
 											{'  '}
 										</Text>
-										<Text>SAP:{' '}
-										{marker.sap_ind === 'Yes' ? (
-											<Ionicons name="heart" size={18} color="paleturquoise" />
-										) : (
-											<Ionicons name="heart-dislike-sharp" size={18} color="rgba(255, 0, 0, 0.3)" />
-										)}</Text>
-										<Text>IP:{' '}
-										{marker.ip_ind === 'Yes' ? (
-											<Ionicons name="heart" size={18} color="red" />
-										) : (
-											<Ionicons name="heart-dislike-sharp" size={18} color="rgba(255, 0, 0, 0.3)" />
-										)}</Text>
+										<Text>
+											SAP:{' '}
+											{marker.sap_ind === 'Yes' ? (
+												<Ionicons name="heart" size={18} color="paleturquoise" />
+											) : (
+												<Ionicons
+													name="heart-dislike-sharp"
+													size={18}
+													color="rgba(255, 0, 0, 0.3)"
+												/>
+											)}
+										</Text>
+										<Text>
+											IP:{' '}
+											{marker.ip_ind === 'Yes' ? (
+												<Ionicons name="heart" size={18} color="red" />
+											) : (
+												<Ionicons
+													name="heart-dislike-sharp"
+													size={18}
+													color="rgba(255, 0, 0, 0.3)"
+												/>
+											)}
+										</Text>
 									</View>
-									{/* <Text>
-										Gifted:{' '}
-										{marker.gifted_ind === 'Yes' ? (
-											<Ionicons name="heart" size={18} color="red" />
-										) : (
-											<Ionicons name="heart-dislike-sharp" size={18} color="rgba(255, 0, 0, 0.3)" />
-										)}{'  '}
-										SAP:{' '}
-										{marker.sap_ind === 'Yes' ? (
-											<Ionicons name="heart" size={18} color="red" />
-										) : (
-											<Ionicons name="heart-dislike-sharp" size={18} color="rgba(255, 0, 0, 0.3)" />
-										)}{'  '}
-										IP:{' '}
-										{marker.ip_ind === 'Yes' ? (
-											<Ionicons name="heart" size={18} color="red" />
-										) : (
-											<Ionicons name="heart-dislike-sharp" size={18} color="rgba(255, 0, 0, 0.3)" />
-										)}
-									</Text> */}
 								</View>
 								<TouchableOpacity
 									style={styles.cardTO}

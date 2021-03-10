@@ -17,4 +17,6 @@ web-build/
 hooks/api.js
 
 #data
-data/
+data/data.json
+data/filterData.json
+
