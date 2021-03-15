@@ -19,11 +19,20 @@ const CARD_WIDTH = width * 0.8;
 const SPACING_FOR_CARD_INSET = width * 0.1 - 10;
 
 export default function SchoolScreen() {
-	const MyProgressChart = () => {
+	const MyProgressChart = (props) => {
+
+		// console.log("Welcome to progresschart");
+		// console.log(props.vancancy);
+		// let jovan = props.vancancy;
+		// console.log("Typf of: ");
+
+		const data = {
+			data:[props.vancancy]
+		}
 		return (
 			<View>
 				<ProgressChart
-					data={[ 0.8 ]}
+					data={data}
 					width={CARD_WIDTH / 2 - 16}
 					height={CARD_HEIGHT - 100}
 					chartConfig={{
@@ -54,7 +63,7 @@ export default function SchoolScreen() {
 						fontSize: 24
 					}}
 				>
-					80%
+					{props.vancancy*100}%
 				</Text>
 			</View>
 		);
@@ -170,10 +179,10 @@ export default function SchoolScreen() {
 							// ...coordinate,
 							latitude: latitude,
 							longitude: longitude,
-							// latitudeDelta: data.region.latitudeDelta - 0.49,
-							// longitudeDelta: data.region.longitudeDelta - 0.08
 							latitudeDelta: data.region.latitudeDelta - 0.49,
-							longitudeDelta: data.region.longitudeDelta - 0.2
+							longitudeDelta: data.region.longitudeDelta - 0.08
+							// latitudeDelta: data.region.latitudeDelta - 0.49,
+							// longitudeDelta: data.region.longitudeDelta - 0.2
 						},
 						350
 					);
@@ -334,7 +343,7 @@ export default function SchoolScreen() {
 									{marker.address}, Singapore({marker.postal_code})
 								</Text>
 								<View style={[ styles.contentContainer, { flexDirection: 'row' } ]}>
-									<MyProgressChart />
+									<MyProgressChart vancancy={marker.vancancy} />
 									{/* <MyBarChart /> */}
 									<MyStackedBarChart />
 								</View>

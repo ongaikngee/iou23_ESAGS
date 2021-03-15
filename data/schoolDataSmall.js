@@ -40,7 +40,8 @@ export const SCHOOL_DATA_ALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.343765,
-		longitude: 103.713125
+		longitude: 103.713125,
+		vancancy: 0.75
 	},
 	{
 		id: 78,
@@ -60,67 +61,197 @@ export const SCHOOL_DATA_ALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.351508,
-		longitude: 103.707564
+		longitude: 103.707564,
+		vancancy: 0.78
 	},
 	{
-		id: 60,
-		address: '628  Lorong 1 Toa Payoh',
-		postal_code: '319765',
-		email_address: 'CHIJTPPS@MOE.EDU.SG',
-		url_address: 'http://www.chijpritoapayoh.moe.edu.sg',
-		dgp_code: 'TOA PAYOH',
-		school_name: 'CHIJ PRIMARY (TOA PAYOH)',
+		id: 107,
+		address: '20   Jurong West Street 61',
+		postal_code: '648200',
+		email_address: 'frontier_ps@moe.edu.sg',
+		url_address: 'http://www.frontierpri.moe.edu.sg',
+		dgp_code: 'JURONG WEST',
+		school_name: 'FRONTIER PRIMARY SCHOOL',
 		autonomous_ind: 'No',
 		gifted_ind: 'No',
 		ip_ind: 'No',
 		sap_ind: 'No',
-		zone_code: 'SOUTH',
-		mainlevel_code: 'PRIMARY',
-		nature_code: "GIRLS' SCHOOL",
-		session_code: 'SINGLE SESSION',
-		type_code: 'GOVERNMENT-AIDED SCH',
-		latitude: 1.333128,
-		longitude: 103.841996
-	},
-	{
-		id: 130,
-		address: '30   TOWNER ROAD',
-		postal_code: '327829',
-		email_address: 'hws@moe.edu.sg',
-		url_address: 'http://www.hongwen.moe.edu.sg',
-		dgp_code: 'KALLANG',
-		school_name: 'HONG WEN SCHOOL',
-		autonomous_ind: 'No',
-		gifted_ind: 'No',
-		ip_ind: 'No',
-		sap_ind: 'Yes',
-		zone_code: 'SOUTH',
+		zone_code: 'WEST',
 		mainlevel_code: 'PRIMARY',
 		nature_code: 'CO-ED SCHOOL',
 		session_code: 'SINGLE SESSION',
-		type_code: 'GOVERNMENT-AIDED SCH',
-		latitude: 1.321993,
-		longitude: 103.858239
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.336755,
+		longitude: 103.699626,
+		vancancy: 0.85
 	},
 	{
-		id: 45,
-		address: '1    Sallim Road',
-		postal_code: '387621',
-		email_address: 'ccps@moe.edu.sg',
-		url_address: 'https://canossaconventpri.moe.edu.sg/',
-		dgp_code: 'GEYLANG',
-		school_name: 'CANOSSA CATHOLIC PRIMARY SCHOOL',
+		id: 145,
+		address: '30   JURONG WEST ST 61',
+		postal_code: '648368',
+		email_address: 'JWPS@MOE.EDU.SG',
+		url_address: 'http://www.jurongwestpri.moe.edu.sg',
+		dgp_code: 'JURONG WEST',
+		school_name: 'JURONG WEST PRIMARY SCHOOL',
 		autonomous_ind: 'No',
 		gifted_ind: 'No',
 		ip_ind: 'No',
 		sap_ind: 'No',
-		zone_code: 'EAST',
+		zone_code: 'WEST',
 		mainlevel_code: 'PRIMARY',
 		nature_code: 'CO-ED SCHOOL',
 		session_code: 'SINGLE SESSION',
-		type_code: 'GOVERNMENT-AIDED SCH',
-		latitude: 1.326213,
-		longitude: 103.882156
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.338736,
+		longitude: 103.698656,
+		vancancy: 0.78
+	},
+	{
+		id: 148,
+		address: '31   JURONG WEST STREET 91',
+		postal_code: '649037',
+		email_address: 'JUYING_PS@MOE.EDU.SG',
+		url_address: 'http://www.juyingpri.moe.edu.sg/',
+		dgp_code: 'JURONG WEST',
+		school_name: 'JUYING PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'WEST',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.339482,
+		longitude: 103.687581,
+		vancancy: 0.93
+	},
+	{
+		id: 158,
+		address: '161  Corporation Walk',
+		postal_code: '618310',
+		email_address: 'lakeside_ps@moe.edu.sg',
+		url_address: 'http://www.lakesidepri.moe.edu.sg/',
+		dgp_code: 'JURONG WEST',
+		school_name: 'LAKESIDE PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'WEST',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.338374,
+		longitude: 103.717307,
+		vancancy: 0.78
+	},
+	{
+		id: 220,
+		address: '23   JURONG WEST STREET 81',
+		postal_code: '649076',
+		email_address: 'pioneer_ps@moe.edu.sg',
+		url_address: 'http://www.pioneerpri.moe.edu.sg',
+		dgp_code: 'JURONG WEST',
+		school_name: 'PIONEER PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'WEST',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.348402,
+		longitude: 103.695503,
+		vancancy: 0.86
+	},
+	{
+		id: 256,
+		address: '8    JURONG WEST STREET 51',
+		postal_code: '649332',
+		email_address: 'sqps@moe.edu.sg',
+		url_address: 'http://www.shuqunpri.moe.edu.sg',
+		dgp_code: 'JURONG WEST',
+		school_name: 'SHUQUN PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'WEST',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.347579,
+		longitude: 103.721508,
+		vancancy: 0.67
+	},
+	{
+		id: 307,
+		address: '1    JURONG WEST ST 72',
+		postal_code: '649223',
+		email_address: 'WGPS@MOE.EDU.SG',
+		url_address: 'http://www.westgrovepri.moe.edu.sg/',
+		dgp_code: 'JURONG WEST',
+		school_name: 'WEST GROVE PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'WEST',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.344836,
+		longitude: 103.698977,
+		vancancy: 0.87
+	},
+	{
+		id: 311,
+		address: '1    Jurong West Street 73',
+		postal_code: '649188',
+		email_address: 'westwood_ps@moe.edu.sg',
+		url_address: 'http://www.westwoodpri.moe.edu.sg',
+		dgp_code: 'JURONG WEST',
+		school_name: 'WESTWOOD PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'WEST',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.347206,
+		longitude: 103.700542,
+		vancancy: 0.95
+	},
+	{
+		id: 322,
+		address: '5    JURONG WEST STREET 91',
+		postal_code: '649036',
+		email_address: 'XINGNAN_PS@MOE.EDU.SG',
+		url_address: 'http://www.xingnanpri.moe.edu.sg',
+		dgp_code: 'JURONG WEST',
+		school_name: 'XINGNAN PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'WEST',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.342357,
+		longitude: 103.687969,
+		vancancy: 0.94
 	},
 	{
 		id: 19,
@@ -140,7 +271,8 @@ export const SCHOOL_DATA_ALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.348477,
-		longitude: 103.95155
+		longitude: 103.95155,
+		vancancy: 0.75
 	},
 	{
 		id: 53,
@@ -160,16 +292,101 @@ export const SCHOOL_DATA_ALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.339846,
-		longitude: 103.951991
+		longitude: 103.951991,
+		vancancy: 0.82
 	},
 	{
-		id: 153,
-		address: '350  GUILLEMARD ROAD',
-		postal_code: '399772',
-		email_address: 'KONGHWA_SCH@MOE.EDU.SG',
-		url_address: 'http://www.konghwa.moe.edu.sg',
-		dgp_code: 'GEYLANG',
-		school_name: 'KONG HWA SCHOOL',
+		id: 66,
+		address: '1    TAMPINES STREET 21',
+		postal_code: '529392',
+		email_address: 'czps@moe.edu.sg',
+		url_address: 'http://www.chongzhengpri.moe.edu.sg',
+		dgp_code: 'TAMPINES',
+		school_name: 'CHONGZHENG PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'EAST',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.351156,
+		longitude: 103.951505,
+		vancancy: 0.89
+	},
+	{
+		id: 89,
+		address: '31   TAMPINES ST 33',
+		postal_code: '529258',
+		email_address: 'esps@moe.edu.sg',
+		url_address: 'http://www.eastspringpri.moe.edu.sg',
+		dgp_code: 'TAMPINES',
+		school_name: 'EAST SPRING PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'EAST',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.353324,
+		longitude: 103.961849,
+		vancancy: 0.87
+	},
+	{
+		id: 116,
+		address: '1    TAMPINES STREET 42',
+		postal_code: '529176',
+		email_address: 'GSPS@MOE.EDU.SG',
+		url_address: 'http://www.gongshangpri.moe.edu.sg',
+		dgp_code: 'TAMPINES',
+		school_name: 'GONGSHANG PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'EAST',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.357797,
+		longitude: 103.948698,
+		vancancy: 0.92
+	},
+	{
+		id: 140,
+		address: '2    Tampines Street 91',
+		postal_code: '528906',
+		email_address: 'JUNYUAN_PS@MOE.EDU.SG',
+		url_address: 'https://junyuanpri.moe.edu.sg',
+		dgp_code: 'TAMPINES',
+		school_name: 'JUNYUAN PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'EAST',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.347682,
+		longitude: 103.940215,
+		vancancy: 0.87
+	},
+	{
+		id: 221,
+		address: '21   TAMPINES STREET 71',
+		postal_code: '529067',
+		email_address: 'contact@poiching.moe.edu.sg',
+		url_address: 'http://www.poiching.moe.edu.sg',
+		dgp_code: 'TAMPINES',
+		school_name: 'POI CHING SCHOOL',
 		autonomous_ind: 'No',
 		gifted_ind: 'No',
 		ip_ind: 'No',
@@ -179,108 +396,93 @@ export const SCHOOL_DATA_ALL = [
 		nature_code: 'CO-ED SCHOOL',
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT-AIDED SCH',
-		latitude: 1.311608,
-		longitude: 103.888678
+		latitude: 1.358384,
+		longitude: 103.934949,
+		vancancy: 0.94
 	},
 	{
-		id: 161,
-		address: '10   UBI AVENUE 1',
-		postal_code: '408931',
-		email_address: 'MBS@MOE.EDU.SG',
-		url_address: 'http://www.mahabodhi.moe.edu.sg/',
-		dgp_code: 'GEYLANG',
-		school_name: 'MAHA BODHI SCHOOL',
+		id: 273,
+		address: '2    Tampines Ave 3',
+		postal_code: '529706',
+		email_address: 'shps@moe.edu.sg',
+		url_address: 'http://www.shps.moe.edu.sg',
+		dgp_code: 'TAMPINES',
+		school_name: "ST. HILDA'S PRIMARY SCHOOL",
 		autonomous_ind: 'No',
-		gifted_ind: 'No',
+		gifted_ind: 'Yes',
 		ip_ind: 'No',
-		sap_ind: 'Yes',
+		sap_ind: 'No',
 		zone_code: 'EAST',
 		mainlevel_code: 'PRIMARY',
 		nature_code: 'CO-ED SCHOOL',
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT-AIDED SCH',
-		latitude: 1.328579,
-		longitude: 103.902286
+		latitude: 1.34916,
+		longitude: 103.93722,
+		vancancy: 0.93
 	},
 	{
-		id: 91,
-		address: '41   EDGEFIELD PLAINS',
-		postal_code: '828869',
-		email_address: 'edgefield_ps@moe.edu.sg',
-		url_address: 'http://www.edgefieldpri.moe.edu.sg',
-		dgp_code: 'PUNGGOL',
-		school_name: 'EDGEFIELD PRIMARY SCHOOL',
+		id: 284,
+		address: '30   TAMPINES AVENUE 9',
+		postal_code: '529565',
+		email_address: 'TNPS@MOE.EDU.SG',
+		url_address: 'http://www.tampinesnorthpri.moe.edu.sg',
+		dgp_code: 'TAMPINES',
+		school_name: 'TAMPINES NORTH PRIMARY SCHOOL',
 		autonomous_ind: 'No',
 		gifted_ind: 'No',
 		ip_ind: 'No',
 		sap_ind: 'No',
-		zone_code: 'NORTH',
+		zone_code: 'EAST',
 		mainlevel_code: 'PRIMARY',
 		nature_code: 'CO-ED SCHOOL',
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
-		latitude: 1.400287,
-		longitude: 103.90753
+		latitude: 1.360281,
+		longitude: 103.948387,
+		vancancy: 0.76
 	},
 	{
-		id: 6,
-		address: '2A   Prince Charles Crescent',
-		postal_code: '159016',
-		email_address: 'alexandra_ps@moe.edu.sg',
-		url_address: 'http://alexandrapri.moe.edu.sg',
-		dgp_code: 'BUKIT MERAH',
-		school_name: 'ALEXANDRA PRIMARY SCHOOL',
+		id: 285,
+		address: '250  TAMPINES STREET 12',
+		postal_code: '529426',
+		email_address: 'TPPS@MOE.EDU.SG',
+		url_address: 'http://www.tampinespri.moe.edu.sg',
+		dgp_code: 'TAMPINES',
+		school_name: 'TAMPINES PRIMARY SCHOOL',
 		autonomous_ind: 'No',
 		gifted_ind: 'No',
 		ip_ind: 'No',
 		sap_ind: 'No',
-		zone_code: 'SOUTH',
+		zone_code: 'EAST',
 		mainlevel_code: 'PRIMARY',
 		nature_code: 'CO-ED SCHOOL',
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
-		latitude: 1.291346,
-		longitude: 103.824169
+		latitude: 1.350502,
+		longitude: 103.944471,
+		vancancy: 0.87
 	},
 	{
-		id: 234,
-		address: '1    BUKIT PURMEI AVENUE',
-		postal_code: '99840',
-		email_address: 'rmps@moe.edu.sg',
-		url_address: 'http://www.radinmasps.moe.edu.sg',
-		dgp_code: 'BUKIT MERAH',
-		school_name: 'RADIN MAS PRIMARY SCHOOL',
+		id: 338,
+		address: '3    TAMPINES STREET 21',
+		postal_code: '529393',
+		email_address: 'YUMIN_PS@MOE.EDU.SG',
+		url_address: 'http://www.yuminpri.moe.edu.sg',
+		dgp_code: 'TAMPINES',
+		school_name: 'YUMIN PRIMARY SCHOOL',
 		autonomous_ind: 'No',
 		gifted_ind: 'No',
 		ip_ind: 'No',
 		sap_ind: 'No',
-		zone_code: 'SOUTH',
+		zone_code: 'EAST',
 		mainlevel_code: 'PRIMARY',
 		nature_code: 'CO-ED SCHOOL',
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
-		latitude: 1.274958,
-		longitude: 103.824188
-	},
-	{
-		id: 31,
-		address: '91   TELOK BLANGAH HEIGHTS',
-		postal_code: '109100',
-		email_address: 'BRPS@MOE.EDU.SG',
-		url_address: 'http://www.blangahrisepri.moe.edu.sg/',
-		dgp_code: 'BUKIT MERAH',
-		school_name: 'BLANGAH RISE PRIMARY SCHOOL',
-		autonomous_ind: 'No',
-		gifted_ind: 'No',
-		ip_ind: 'No',
-		sap_ind: 'No',
-		zone_code: 'SOUTH',
-		mainlevel_code: 'PRIMARY',
-		nature_code: 'CO-ED SCHOOL',
-		session_code: 'SINGLE SESSION',
-		type_code: 'GOVERNMENT SCHOOL',
-		latitude: 1.277057,
-		longitude: 103.809091
+		latitude: 1.351005,
+		longitude: 103.950149,
+		vancancy: 0.78
 	},
 	{
 		id: 7,
@@ -300,7 +502,8 @@ export const SCHOOL_DATA_ALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.390885,
-		longitude: 103.886274
+		longitude: 103.886274,
+		vancancy: 0.9
 	},
 	{
 		id: 75,
@@ -320,7 +523,427 @@ export const SCHOOL_DATA_ALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.394797,
-		longitude: 103.897515
+		longitude: 103.897515,
+		vancancy: 0.9
+	},
+	// {
+	// 	id: 104,
+	// 	address: '70   Fernvale Link',
+	// 	postal_code: '797538',
+	// 	email_address: 'ferngreen_ps@moe.edu.sg',
+	// 	url_address: 'www.ferngreenpri.moe.edu.sg',
+	// 	dgp_code: 'SENG KANG',
+	// 	school_name: 'FERN GREEN PRIMARY SCHOOL',
+	// 	autonomous_ind: 'No',
+	// 	gifted_ind: 'No',
+	// 	ip_ind: 'No',
+	// 	sap_ind: 'No',
+	// 	zone_code: 'EAST',
+	// 	mainlevel_code: 'PRIMARY',
+	// 	nature_code: 'CO-ED SCHOOL',
+	// 	session_code: 'SINGLE SESSION',
+	// 	type_code: 'GOVERNMENT SCHOOL',
+	// 	latitude: 1.316382,
+	// 	longitude: 103.833828
+	// },
+	{
+		id: 105,
+		address: '1    Fernvale Lane',
+		postal_code: '797701',
+		email_address: 'fernvale_ps@moe.edu.sg',
+		url_address: 'http://www.fernvalepri.moe.edu.sg/home',
+		dgp_code: 'SENG KANG',
+		school_name: 'FERNVALE PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'NORTH',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.389731,
+		longitude: 103.874035,
+		vancancy: 0.9
+	},
+	{
+		id: 178,
+		address: '50   ANCHORVALE LINK',
+		postal_code: '545080',
+		email_address: 'NCPS@MOE.EDU.SG',
+		url_address: 'http://www.ncps.moe.edu.sg',
+		dgp_code: 'SENG KANG',
+		school_name: 'NAN CHIAU PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'NORTH',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT-AIDED SCH',
+		latitude: 1.39265,
+		longitude: 103.890411,
+		vancancy: 0.9
+	},
+	{
+		id: 191,
+		address: '1    RIVERVALE STREET',
+		postal_code: '545088',
+		email_address: 'nsps@moe.edu.sg',
+		url_address: 'http://www.northspringpri.moe.edu.sg',
+		dgp_code: 'SENG KANG',
+		school_name: 'NORTH SPRING PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'NORTH',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.388153,
+		longitude: 103.903705,
+		vancancy: 0.9
+	},
+	{
+		id: 193,
+		address: '20   Compassvale Link',
+		postal_code: '544974',
+		email_address: 'nvtps@moe.edu.sg',
+		url_address: 'http://www.northvistapri.moe.edu.sg',
+		dgp_code: 'SENG KANG',
+		school_name: 'NORTH VISTA PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'NORTH',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.382831,
+		longitude: 103.895965,
+		vancancy: 0.9
+	},
+	{
+		id: 205,
+		address: '150  Compassvale Bow',
+		postal_code: '544822',
+		email_address: 'palmview_ps@moe.edu.sg',
+		url_address: 'http://www.palmviewpri.moe.edu.sg',
+		dgp_code: 'SENG KANG',
+		school_name: 'PALM VIEW PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'NORTH',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.383867,
+		longitude: 103.891118,
+		vancancy: 0.9
+	},
+	{
+		id: 244,
+		address: '80   RIVERVALE DRIVE',
+		postal_code: '545092',
+		email_address: 'RIVERVALE_PS@MOE.EDU.SG',
+		url_address: 'http://www.rivervalepri.moe.edu.sg/',
+		dgp_code: 'SENG KANG',
+		school_name: 'RIVERVALE PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'NORTH',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.3933,
+		longitude: 103.904089,
+		vancancy: 0.9
+	},
+	{
+		id: 251,
+		address: '21   COMPASSVALE WALK',
+		postal_code: '545166',
+		email_address: 'SKPS@MOE.EDU.SG',
+		url_address: 'http://www.sengkangpri.moe.edu.sg/',
+		dgp_code: 'SENG KANG',
+		school_name: 'SENG KANG PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'NORTH',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.389401,
+		longitude: 103.899614,
+		vancancy: 0.9
+	},
+	// {
+	// 	id: 253,
+	// 	address: '15   Fernvale Road',
+	// 	postal_code: '797636',
+	// 	email_address: 'sengkanggreen_ps@moe.edu.sg',
+	// 	url_address: 'http://www.sengkanggreenpri.moe.edu.sg/',
+	// 	dgp_code: 'SENG KANG',
+	// 	school_name: 'SENGKANG GREEN PRIMARY SCHOOL',
+	// 	autonomous_ind: 'No',
+	// 	gifted_ind: 'No',
+	// 	ip_ind: 'No',
+	// 	sap_ind: 'No',
+	// 	zone_code: 'EAST',
+	// 	mainlevel_code: 'PRIMARY',
+	// 	nature_code: 'CO-ED SCHOOL',
+	// 	session_code: 'SINGLE SESSION',
+	// 	type_code: 'GOVERNMENT SCHOOL',
+	// 	latitude: 1.392866,
+	// 	longitude: 103.,
+	// 	vancancy: 0.9,
+	// },
+	{
+		id: 263,
+		address: '71   Anchorvale Link',
+		postal_code: '544799',
+		email_address: 'springdale_ps@moe.edu.sg',
+		url_address: 'http://springdalepri.moe.edu.sg/',
+		dgp_code: 'SENG KANG',
+		school_name: 'SPRINGDALE PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'EAST',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.394948,
+		longitude: 103.889663,
+		vancancy: 0.9
+	},
+	{
+		id: 6,
+		address: '2A   Prince Charles Crescent',
+		postal_code: '159016',
+		email_address: 'alexandra_ps@moe.edu.sg',
+		url_address: 'http://alexandrapri.moe.edu.sg',
+		dgp_code: 'BUKIT MERAH',
+		school_name: 'ALEXANDRA PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'SOUTH',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.291346,
+		longitude: 103.824169,
+		vancancy: 0.8
+	},
+	{
+		id: 234,
+		address: '1    BUKIT PURMEI AVENUE',
+		postal_code: '99840',
+		email_address: 'rmps@moe.edu.sg',
+		url_address: 'http://www.radinmasps.moe.edu.sg',
+		dgp_code: 'BUKIT MERAH',
+		school_name: 'RADIN MAS PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'SOUTH',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.274958,
+		longitude: 103.824188,
+		vancancy: 0.7
+	},
+	{
+		id: 31,
+		address: '91   TELOK BLANGAH HEIGHTS',
+		postal_code: '109100',
+		email_address: 'BRPS@MOE.EDU.SG',
+		url_address: 'http://www.blangahrisepri.moe.edu.sg/',
+		dgp_code: 'BUKIT MERAH',
+		school_name: 'BLANGAH RISE PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'SOUTH',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.277057,
+		longitude: 103.809091,
+		vancancy: 0.8
+	},
+	{
+		id: 46,
+		address: '1    Cantonment Close',
+		postal_code: '88256',
+		email_address: 'cantonment_ps@moe.edu.sg',
+		url_address: 'http://www.cantonmentpri.moe.edu.sg',
+		dgp_code: 'BUKIT MERAH',
+		school_name: 'CANTONMENT PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'SOUTH',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.275876,
+		longitude: 103.840055,
+		vancancy: 0.9
+	},
+	{
+		id: 17,
+		address: '16   WINSTEDT ROAD',
+		postal_code: '227988',
+		email_address: 'acjs@moe.edu.sg',
+		url_address: 'www.acsj.moe.edu.sg',
+		dgp_code: 'CENTRAL',
+		school_name: 'ANGLO-CHINESE SCHOOL (JUNIOR)',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'SOUTH',
+		mainlevel_code: 'PRIMARY',
+		nature_code: "BOYS' SCHOOL",
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT-AIDED SCH',
+		latitude: 1.309243,
+		longitude: 103.841377,
+		vancancy: 0.8
+	},
+	{
+		id: 241,
+		address: '2    RIVER VALLEY GREEN',
+		postal_code: '237993',
+		email_address: 'rvps@moe.edu.sg',
+		url_address: 'http://www.rivervalleypri.moe.edu.sg',
+		dgp_code: 'CENTRAL',
+		school_name: 'RIVER VALLEY PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'SOUTH',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.293477,
+		longitude: 103.836702,
+		vancancy: 0.7
+	},
+	{
+		id: 281,
+		address: '1    VICTORIA LANE',
+		postal_code: '198423',
+		email_address: 'STAMFORD_PS@MOE.EDU.SG',
+		url_address: 'http://www.stamfordpri.moe.edu.sg',
+		dgp_code: 'CENTRAL',
+		school_name: 'STAMFORD PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'SOUTH',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.303754,
+		longitude: 103.857791,
+		vancancy: 0.8
+	},
+	{
+		id: 55,
+		address: '1    Bukit Teresa Road',
+		postal_code: '99757',
+		email_address: 'CHIJKS@MOE.EDU.SG',
+		url_address: 'http://www.chijkellock.moe.edu.sg/',
+		dgp_code: 'BUKIT MERAH',
+		school_name: 'CHIJ (KELLOCK)',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'SOUTH',
+		mainlevel_code: 'PRIMARY',
+		nature_code: "GIRLS' SCHOOL",
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT-AIDED SCH',
+		latitude: 1.275454,
+		longitude: 103.827767,
+		vancancy: 0.9
+	},
+	{
+		id: 112,
+		address: '100  REDHILL CLOSE',
+		postal_code: '158901',
+		email_address: 'gesps@moe.edu.sg',
+		url_address: 'http://www.ganengsengpri.moe.edu.sg',
+		dgp_code: 'BUKIT MERAH',
+		school_name: 'GAN ENG SENG PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'SOUTH',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.285762,
+		longitude: 103.815301,
+		vancancy: 0.8
+	},
+	{
+		id: 341,
+		address: '51   Jalan Membina',
+		postal_code: '169485',
+		email_address: 'ZHANGDE_PS@MOE.EDU.SG',
+		url_address: 'http://www.zhangdepri.moe.edu.sg/',
+		dgp_code: 'BUKIT MERAH',
+		school_name: 'ZHANGDE PRIMARY SCHOOL',
+		autonomous_ind: 'No',
+		gifted_ind: 'No',
+		ip_ind: 'No',
+		sap_ind: 'No',
+		zone_code: 'SOUTH',
+		mainlevel_code: 'PRIMARY',
+		nature_code: 'CO-ED SCHOOL',
+		session_code: 'SINGLE SESSION',
+		type_code: 'GOVERNMENT SCHOOL',
+		latitude: 1.28426,
+		longitude: 103.826059,
+		vancancy: 0.9
 	}
 ];
 
@@ -4118,7 +4741,8 @@ export const SCHOOL_DATA_SOUTH_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.291346,
-		longitude: 103.824169
+		longitude: 103.824169,
+		vancancy: 0.8
 	},
 	{
 		id: 234,
@@ -4138,7 +4762,8 @@ export const SCHOOL_DATA_SOUTH_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.274958,
-		longitude: 103.824188
+		longitude: 103.824188,
+		vancancy: 0.7
 	},
 	{
 		id: 31,
@@ -4158,7 +4783,8 @@ export const SCHOOL_DATA_SOUTH_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.277057,
-		longitude: 103.809091
+		longitude: 103.809091,
+		vancancy: 0.8
 	},
 	{
 		id: 46,
@@ -4178,7 +4804,8 @@ export const SCHOOL_DATA_SOUTH_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.275876,
-		longitude: 103.840055
+		longitude: 103.840055,
+		vancancy: 0.9
 	},
 	{
 		id: 17,
@@ -4198,7 +4825,8 @@ export const SCHOOL_DATA_SOUTH_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT-AIDED SCH',
 		latitude: 1.309243,
-		longitude: 103.841377
+		longitude: 103.841377,
+		vancancy: 0.8
 	},
 	{
 		id: 241,
@@ -4218,7 +4846,8 @@ export const SCHOOL_DATA_SOUTH_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.293477,
-		longitude: 103.836702
+		longitude: 103.836702,
+		vancancy: 0.7
 	},
 	{
 		id: 281,
@@ -4238,7 +4867,8 @@ export const SCHOOL_DATA_SOUTH_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.303754,
-		longitude: 103.857791
+		longitude: 103.857791,
+		vancancy: 0.8
 	},
 	{
 		id: 55,
@@ -4258,7 +4888,8 @@ export const SCHOOL_DATA_SOUTH_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT-AIDED SCH',
 		latitude: 1.275454,
-		longitude: 103.827767
+		longitude: 103.827767,
+		vancancy: 0.9
 	},
 	{
 		id: 112,
@@ -4278,7 +4909,8 @@ export const SCHOOL_DATA_SOUTH_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.285762,
-		longitude: 103.815301
+		longitude: 103.815301,
+		vancancy: 0.8
 	},
 	{
 		id: 341,
@@ -4298,7 +4930,8 @@ export const SCHOOL_DATA_SOUTH_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.28426,
-		longitude: 103.826059
+		longitude: 103.826059,
+		vancancy: 0.9
 	}
 ];
 
@@ -4321,7 +4954,8 @@ export const SCHOOL_DATA_NORTH_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.390885,
-		longitude: 103.886274
+		longitude: 103.886274,
+		vancancy: 0.9
 	},
 	{
 		id: 75,
@@ -4341,7 +4975,8 @@ export const SCHOOL_DATA_NORTH_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.394797,
-		longitude: 103.897515
+		longitude: 103.897515,
+		vancancy: 0.9
 	},
 	// {
 	// 	id: 104,
@@ -4381,7 +5016,8 @@ export const SCHOOL_DATA_NORTH_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.389731,
-		longitude: 103.874035
+		longitude: 103.874035,
+		vancancy: 0.9
 	},
 	{
 		id: 178,
@@ -4401,7 +5037,8 @@ export const SCHOOL_DATA_NORTH_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT-AIDED SCH',
 		latitude: 1.39265,
-		longitude: 103.890411
+		longitude: 103.890411,
+		vancancy: 0.9
 	},
 	{
 		id: 191,
@@ -4421,7 +5058,8 @@ export const SCHOOL_DATA_NORTH_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.388153,
-		longitude: 103.903705
+		longitude: 103.903705,
+		vancancy: 0.9
 	},
 	{
 		id: 193,
@@ -4441,7 +5079,8 @@ export const SCHOOL_DATA_NORTH_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.382831,
-		longitude: 103.895965
+		longitude: 103.895965,
+		vancancy: 0.9
 	},
 	{
 		id: 205,
@@ -4461,7 +5100,8 @@ export const SCHOOL_DATA_NORTH_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.383867,
-		longitude: 103.891118
+		longitude: 103.891118,
+		vancancy: 0.9
 	},
 	{
 		id: 244,
@@ -4481,7 +5121,8 @@ export const SCHOOL_DATA_NORTH_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.3933,
-		longitude: 103.904089
+		longitude: 103.904089,
+		vancancy: 0.9
 	},
 	{
 		id: 251,
@@ -4501,28 +5142,30 @@ export const SCHOOL_DATA_NORTH_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.389401,
-		longitude: 103.899614
+		longitude: 103.899614,
+		vancancy: 0.9
 	},
-	{
-		id: 253,
-		address: '15   Fernvale Road',
-		postal_code: '797636',
-		email_address: 'sengkanggreen_ps@moe.edu.sg',
-		url_address: 'http://www.sengkanggreenpri.moe.edu.sg/',
-		dgp_code: 'SENG KANG',
-		school_name: 'SENGKANG GREEN PRIMARY SCHOOL',
-		autonomous_ind: 'No',
-		gifted_ind: 'No',
-		ip_ind: 'No',
-		sap_ind: 'No',
-		zone_code: 'EAST',
-		mainlevel_code: 'PRIMARY',
-		nature_code: 'CO-ED SCHOOL',
-		session_code: 'SINGLE SESSION',
-		type_code: 'GOVERNMENT SCHOOL',
-		latitude: 1.392866,
-		longitude: 103.875053
-	},
+	// {
+	// 	id: 253,
+	// 	address: '15   Fernvale Road',
+	// 	postal_code: '797636',
+	// 	email_address: 'sengkanggreen_ps@moe.edu.sg',
+	// 	url_address: 'http://www.sengkanggreenpri.moe.edu.sg/',
+	// 	dgp_code: 'SENG KANG',
+	// 	school_name: 'SENGKANG GREEN PRIMARY SCHOOL',
+	// 	autonomous_ind: 'No',
+	// 	gifted_ind: 'No',
+	// 	ip_ind: 'No',
+	// 	sap_ind: 'No',
+	// 	zone_code: 'EAST',
+	// 	mainlevel_code: 'PRIMARY',
+	// 	nature_code: 'CO-ED SCHOOL',
+	// 	session_code: 'SINGLE SESSION',
+	// 	type_code: 'GOVERNMENT SCHOOL',
+	// 	latitude: 1.392866,
+	// 	longitude: 103.,
+	// 	vancancy: 0.9,
+	// },
 	{
 		id: 263,
 		address: '71   Anchorvale Link',
@@ -4541,7 +5184,8 @@ export const SCHOOL_DATA_NORTH_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.394948,
-		longitude: 103.889663
+		longitude: 103.889663,
+		vancancy: 0.9
 	}
 ];
 
@@ -4564,7 +5208,8 @@ export const SCHOOL_DATA_EAST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.348477,
-		longitude: 103.95155
+		longitude: 103.95155,
+		vancancy: 0.75
 	},
 	{
 		id: 53,
@@ -4584,7 +5229,8 @@ export const SCHOOL_DATA_EAST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.339846,
-		longitude: 103.951991
+		longitude: 103.951991,
+		vancancy: 0.82
 	},
 	{
 		id: 66,
@@ -4604,7 +5250,8 @@ export const SCHOOL_DATA_EAST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.351156,
-		longitude: 103.951505
+		longitude: 103.951505,
+		vancancy: 0.89
 	},
 	{
 		id: 89,
@@ -4624,7 +5271,8 @@ export const SCHOOL_DATA_EAST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.353324,
-		longitude: 103.961849
+		longitude: 103.961849,
+		vancancy: 0.87
 	},
 	{
 		id: 116,
@@ -4644,7 +5292,8 @@ export const SCHOOL_DATA_EAST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.357797,
-		longitude: 103.948698
+		longitude: 103.948698,
+		vancancy: 0.92
 	},
 	{
 		id: 140,
@@ -4664,7 +5313,8 @@ export const SCHOOL_DATA_EAST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.347682,
-		longitude: 103.940215
+		longitude: 103.940215,
+		vancancy: 0.87
 	},
 	{
 		id: 221,
@@ -4684,7 +5334,8 @@ export const SCHOOL_DATA_EAST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT-AIDED SCH',
 		latitude: 1.358384,
-		longitude: 103.934949
+		longitude: 103.934949,
+		vancancy: 0.94
 	},
 	{
 		id: 273,
@@ -4704,7 +5355,8 @@ export const SCHOOL_DATA_EAST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT-AIDED SCH',
 		latitude: 1.34916,
-		longitude: 103.93722
+		longitude: 103.93722,
+		vancancy: 0.93
 	},
 	{
 		id: 284,
@@ -4724,7 +5376,8 @@ export const SCHOOL_DATA_EAST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.360281,
-		longitude: 103.948387
+		longitude: 103.948387,
+		vancancy: 0.76
 	},
 	{
 		id: 285,
@@ -4744,7 +5397,8 @@ export const SCHOOL_DATA_EAST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.350502,
-		longitude: 103.944471
+		longitude: 103.944471,
+		vancancy: 0.87
 	},
 	{
 		id: 338,
@@ -4764,7 +5418,8 @@ export const SCHOOL_DATA_EAST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.351005,
-		longitude: 103.950149
+		longitude: 103.950149,
+		vancancy: 0.78
 	}
 ];
 
@@ -4787,7 +5442,8 @@ export const SCHOOL_DATA_WEST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.343765,
-		longitude: 103.713125
+		longitude: 103.713125,
+		vancancy: 0.75
 	},
 	{
 		id: 78,
@@ -4807,7 +5463,8 @@ export const SCHOOL_DATA_WEST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.351508,
-		longitude: 103.707564
+		longitude: 103.707564,
+		vancancy: 0.78
 	},
 	{
 		id: 107,
@@ -4827,7 +5484,8 @@ export const SCHOOL_DATA_WEST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.336755,
-		longitude: 103.699626
+		longitude: 103.699626,
+		vancancy: 0.85
 	},
 	{
 		id: 145,
@@ -4847,7 +5505,8 @@ export const SCHOOL_DATA_WEST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.338736,
-		longitude: 103.698656
+		longitude: 103.698656,
+		vancancy: 0.78
 	},
 	{
 		id: 148,
@@ -4867,7 +5526,8 @@ export const SCHOOL_DATA_WEST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.339482,
-		longitude: 103.687581
+		longitude: 103.687581,
+		vancancy: 0.93
 	},
 	{
 		id: 158,
@@ -4887,7 +5547,8 @@ export const SCHOOL_DATA_WEST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.338374,
-		longitude: 103.717307
+		longitude: 103.717307,
+		vancancy: 0.78
 	},
 	{
 		id: 220,
@@ -4907,7 +5568,8 @@ export const SCHOOL_DATA_WEST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.348402,
-		longitude: 103.695503
+		longitude: 103.695503,
+		vancancy: 0.86
 	},
 	// {
 	// 	id: 246,
@@ -4945,7 +5607,8 @@ export const SCHOOL_DATA_WEST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.347579,
-		longitude: 103.721508
+		longitude: 103.721508,
+		vancancy: 0.67
 	},
 	{
 		id: 307,
@@ -4965,7 +5628,8 @@ export const SCHOOL_DATA_WEST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.344836,
-		longitude: 103.698977
+		longitude: 103.698977,
+		vancancy: 0.87
 	},
 	{
 		id: 311,
@@ -4985,7 +5649,8 @@ export const SCHOOL_DATA_WEST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.347206,
-		longitude: 103.700542
+		longitude: 103.700542,
+		vancancy: 0.95
 	},
 	{
 		id: 322,
@@ -5005,6 +5670,7 @@ export const SCHOOL_DATA_WEST_FINAL_SMALL = [
 		session_code: 'SINGLE SESSION',
 		type_code: 'GOVERNMENT SCHOOL',
 		latitude: 1.342357,
-		longitude: 103.687969
+		longitude: 103.687969,
+		vancancy: 0.94
 	}
 ];
